@@ -55,8 +55,10 @@ margin-bottom: 20px;
 display: flex;
 }
 
-.social-list-item-footer:not(:last-child){
-margin-right: 10px;
+.social-list-item-footer{
+  &:not(:last-child){
+  margin-right: 10px;
+  }
 }
 
 .social-list-icon-footer{
@@ -110,8 +112,10 @@ background-color: transparent;
 color: rgba(255, 255, 255, 0.664);
 }
 
-.mail:not(:last-child){
-margin-right: 12px;
+.mail{
+  &:not(:last-child){
+  margin-right: 12px;
+  }
 }
 
 .contact-form{
