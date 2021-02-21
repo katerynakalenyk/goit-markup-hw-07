@@ -53,12 +53,6 @@ padding: 12px 42px;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
   
-.contact-form-message{
-padding: 12px 16px;
-margin-bottom: 20px;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-  
 .your-data{
 font-weight: 700;
 font-size: 20px;
@@ -67,14 +61,11 @@ text-align: center;
 letter-spacing: 0.03em;
 margin-bottom: 12px;
 }
+
 .form-field{
 position: relative;
 margin-top: 4px;
 width: 100%;
-}
-  
-.form-field:focus-within > .contact-modal-icon{
-fill: var(--hover-color);
 }
   
 .form-field .contact-form-input:focus, 
@@ -82,12 +73,15 @@ fill: var(--hover-color);
 border-color: var(--hover-color); 
 outline: transparent; 
 }
-  
-.form-agreement:focus{
-border-color: var(--hover-color);
-border: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+ 
+.form-agreement{
+margin-bottom: 30px;   
+    
+  &:focus{
+  border-color: var(--hover-color);
+  border: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 }
-  
   
 .contact-modal-icon{
 position: absolute;
@@ -98,6 +92,9 @@ left: 12px;
 display: inline-block;
 transform: translateY(-50%);
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.form-field:focus-within > &{
+    fill: var(--hover-color);
+    }
 }
 
 .data{
@@ -107,12 +104,13 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.166;
 letter-spacing: 0.01em;
-color: #757575;  
+color: #757575; 
+  &:not(:first-child){
+    margin-top: 10px;
+  } 
 }
 
-.data:not(:first-child){
-    margin-top: 10px;
-}
+
 .contact-form-message{
 resize: none;
 width: 448px;
@@ -121,8 +119,11 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
 margin-top: 4px;
+padding: 12px 16px;
+margin-bottom: 20px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
+
 .checkbox-label{
 font-weight:400;
 font-size: 14px;
@@ -131,12 +132,12 @@ letter-spacing: 0.03em;
 color: #757575;
 align-items: baseline;
 }
-  
+
 .checkbox-icon{
 display: inline-block;
 width: 16px;
 height: 15px;
-background-image: url(../images/icon\check.svg);
+background-image: url(../images/check.svg);
 border-radius: 4px;
 margin-right: 7px;
 border: 1px solid rgba(33, 33, 33, 0.2);;
@@ -161,10 +162,6 @@ line-height: 1.714;
 letter-spacing: 0.03em;
 color: var(--hover-color);
 margin-left: 4px;
-}
-
-.form-agreement{
-margin-bottom: 30px;   
 }
   
 .contact-form-btn{

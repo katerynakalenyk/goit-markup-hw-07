@@ -535,12 +535,6 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-message {
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .your-data {
   font-weight: 700;
   font-size: 20px;
@@ -556,14 +550,14 @@ img {
   width: 100%;
 }
 
-.form-field:focus-within > .contact-modal-icon {
-  fill: var(--hover-color);
-}
-
 .form-field .contact-form-input:focus,
 .contact-form-message:focus {
   border-color: var(--hover-color);
   outline: transparent;
+}
+
+.form-agreement {
+  margin-bottom: 30px;
 }
 
 .form-agreement:focus {
@@ -580,6 +574,10 @@ img {
   display: inline-block;
   transform: translateY(-50%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .contact-modal-icon {
+  fill: var(--hover-color);
 }
 
 .data {
@@ -604,6 +602,9 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   margin-top: 4px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-label {
@@ -619,7 +620,7 @@ img {
   display: inline-block;
   width: 16px;
   height: 15px;
-  background-image: url(../images/icon\check.svg);
+  background-image: url(../images/check.svg);
   border-radius: 4px;
   margin-right: 7px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -644,10 +645,6 @@ img {
   letter-spacing: 0.03em;
   color: var(--hover-color);
   margin-left: 4px;
-}
-
-.form-agreement {
-  margin-bottom: 30px;
 }
 
 .contact-form-btn {
